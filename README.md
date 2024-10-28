@@ -12,27 +12,18 @@ This web app makes note-taking and their general management easier for the user
 - Retrieve notes
 - Edit notes
 - Delete notes
-- Search notes
-- Order notes per category and date taken
 
-### Current progress
-***V-1***
-*Created landing pages for the application*
+### Previous progress can be found here
+https://github.com/Heizal/stickyflask-new
 
-***V-2***
-- Created Dynamically rendered notes page with Flask
-- Used Jinja templates to render HTML and CSS files
+***V-6***
+- Continued previous application
+- User can create a new task
+- User can delete a task
+- User can edit a task
 
-***V-3***
-- Added database and CRUD functionality to application
-- Wrote tests for routes and content
-
-***V-4***
-- Add pagination to application, HTTP forms, validation and exception handling
-- Added custom API for database records
-
-***V-4***
-- Deployed application on render.com
+***V-6***
+- Deployed application
 
 How to deploy application
 - Manually deploy latest commit of application to render and visit the link at the top
