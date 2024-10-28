@@ -6,17 +6,13 @@ import os
 import logging
 from dotenv import load_dotenv
 
-if __name__ == "__main__":
-   app.run()
-elif "GUNICORN_CMD_ARGS" in os.environ:
-   gunicorn_logger = logging.getLogger("gunicorn.error")
-   app.logger.handlers = gunicorn_logger.handlers
-   app.logger.setLevel(gunicorn_logger.level)
+app = None
 
 def create_app():
     load_dotenv()
+    global app
     app = Flask(__name__)
-    #app.config.from_object('app.config')
+
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     app.config['NOTES_PER_PAGE'] = 4
     app.secret_key = os.getenv('SECRET_KEY')
@@ -39,3 +35,11 @@ def register_extensions(app: Flask):
   db.init_app(app)
   migrate.init_app(app, db, compare_type=True)
   login_manager.init_app(app)
+
+app = create_app()
+if "GUNICORN_CMD_ARGS" in os.environ:
+    gunicorn_logger = logging.getLogger("gunicorn.error")
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
+if __name__ == "__main__":
+    app.run()
