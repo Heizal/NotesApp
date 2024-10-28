@@ -1,10 +1,20 @@
 from . import notes, simple_pages, categories, api, users, newnote
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask
 from app.extensions.database import db, migrate
 from app.extensions.authentication import login_manager
 import os
+import logging
+from dotenv import load_dotenv
+
+if __name__ == "__main__":
+   app.run()
+elif "GUNICORN_CMD_ARGS" in os.environ:
+   gunicorn_logger = logging.getLogger("gunicorn.error")
+   app.logger.handlers = gunicorn_logger.handlers
+   app.logger.setLevel(gunicorn_logger.level)
 
 def create_app():
+    load_dotenv()
     app = Flask(__name__)
     #app.config.from_object('app.config')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
