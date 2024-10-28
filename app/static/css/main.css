@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mynerve&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar ul{
+    list-style: none;
+    display: inline;
+    font-family: Montserrat;
+    font-size: 20px;   
+    font-weight: 600; 
+}
+
+.navbar li{
+    display: inline; 
+    padding: 20px 50px 0px 60px;
+    margin: 0;
+    float: right;
+    cursor: pointer;    
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: bisque;
+}
+
+/* Hero text */
+.hero-text{
+    padding: 50px 50px 0px;
+    text-align: center;
+}
+
+.main-heading{
+    font-family: Mynerve;
+    font-size: 100px;
+    margin: 10px;
+}
+
+.main-subtext{
+    font-family: Montserrat; 
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.main-paragraph{
+    font-family: Montserrat; 
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+/* Hero button */
+
+.hero-button{
+    text-align: center;   
+}
+
+.main-button{
+    font-family: Mynerve;
+    height: 100px;
+    width: 200px;
+    background-color: bisque;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+
+.main-button a{
+    color: black;
+    text-decoration: none;
+
+}
+
+/* Notes styling */
+.notes-heading{
+    font-family: Mynerve;
+    font-size: 60px;
+    margin: 50px;
+
+}
+
+.notes-name{
+    font-family: Montserrat;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notes-list {
+    list-style: none;                
+    padding-left: 0;                
+    margin: 0;
+    text-decoration: none;
+}
+
+.note-item {
+    display: flex;                   
+    justify-content: space-between;  
+    align-items: center;             
+    padding: 15px;                   
+    margin-bottom: 10px;             
+    border-bottom: 1px solid #ddd;
+}
+
+.note-content {
+    display: flex;                   
+    align-items: center;           
+}
+
+.notes-bloc{
+    margin: 50px;
+}
+
+.note-actions {
+    display: flex;                  
+    gap: 10px;                      
+}
+
+.notes-content{
+    font-family: Montserrat;
+    color: black;
+
+}
+
+.edit-button, .deletebtn {
+    padding: 10px;                   
+    text-decoration: none;           
+    background-color: #7cf2c9;       
+    color: black;                     
+    border: none;                    
+    border-radius: 5px;              
+    cursor: pointer;                 
+    font-family: Mynerve;
+}
+
+.deletebtn {
+    background-color: #f29393;      
+}
+
+.edit-button:hover, .deletebtn:hover {
+    opacity: 0.9;                   
+}
+
+/* CONTACT CSS */
+/* Navbar styling */
+.contact-navbar ul{
+    list-style: none;
+    display: inline;
+    font-family: Montserrat;
+    font-size: 20px;   
+    font-weight: 600; 
+}
+
+.contact-navbar li{
+    display: inline; 
+    padding: 20px 50px 0px 60px;
+    margin: 0;
+    float: right;
+    cursor: pointer;    
+}
+
+.contact-navbar a{
+    color: black;
+    text-decoration: none;
+}
+
+.contact-navbar a:hover{
+    color: bisque;
+}
+
+/* Image */
+img{
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    padding-top: 150px;
+    padding-left: 60px;
+}
+/* Contact content */
+.contact-info{
+    float: right;
+    bottom: 30px;
+    position: relative;
+    padding-right: 30px;
+
+}
+
+.contact-heading{
+    font-family: Mynerve;
+    font-size: 50px;
+    margin: 0;  
+}
+
+.contact-subtext{
+    font-family: Montserrat; 
+    font-size: 30px;
+}
+
+.contact-paragragh{
+    font-family: Montserrat; 
+    font-size: 20px;
+    font-weight: 300;
+}
+/* Button */
+.contact-button{
+    font-family: Mynerve;
+    height: 80px;
+    width: 180px;
+    background-color: bisque;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.contact-button a{
+    color: black;
+    text-decoration: none;
+}
+
+.newnote_bloc{
+    margin: 50px;
+    
+}
+
+.task_heading{
+    font-size: 50px;
+    font-family: Mynerve;
+}
+
+.task_input{
+    height: 50px;
+    width: 200px;
+}
+
+.submit_btn{
+    font-family: Mynerve;
+    height: 30px;
+    width: 150px;
+    background-color: bisque;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.nav-btns {
+    display: flex;                 
+    justify-content: center;       
+    align-items: center;           
+    margin: 20px 0;                
+}
+
+.previousbtn, .nextbtn {
+    font-family: Mynerve;
+    padding: 10px 15px;            
+    margin: 0 10px;               
+    text-decoration: none;         
+    background-color: #92dff4;     
+    color: #fff;                  
+    border-radius: 5px;           
+}
+
+.previousbtn:disabled, .nextbtn:disabled {
+    background-color: #ddd;       
+    color: #777;                  
+    cursor: not-allowed;           
+}
+
+
+/* Navbar and contact media queries */
+@media only screen and (max-width: 600px){
+    .navbar ul{
+        display: block;
+        padding-right: 10px;
+        font-weight: 400;
+    }
+
+    .navbar li{
+        cursor: pointer;
+    }
+
+    .main-heading{
+        font-size: 80px;
+    } 
+
+    .main-subtext{
+        margin: 0;
+    }
+
+    .main-button{
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .contact-navbar ul{
+        display: block;
+        padding-right: 10px;
+        font-weight: 400;
+    }
+
+    .contact-navbar li{
+        cursor: pointer;
+    }
+
+    img{
+        height: 200px;
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;       
+    }
+
+    .contact-info{
+        top: 20px;
+        text-align: center;
+    }
+
+    .contact-subtext{
+        font-size: 20px;
+    }
+
+    .contact-paragragh{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    /* .navbar ul{
+        font-size: 25px;
+    } */
+
+    .navbar li{
+        cursor: pointer;
+        padding-top: 50px;
+        font-size: 25px;
+
+    }
+
+    .hero-text{
+        margin-top: 50px;
+    }
+
+    .main-heading{
+        font-size: 200px;
+    }
+
+    .main-subtext{
+        font-size: 70px;
+        margin: 0;
+    }
+
+    .main-paragraph{
+        font-size: 30px;
+    }
+
+    .main-button{
+        font-size: 50px;
+        cursor: pointer;
+        height: 200px;
+        width: 350px;
+    }
+
+    .contact-navbar li{
+        cursor: pointer;
+        padding-top: 50px;
+        font-size: 25px;
+
+    }
+
+    img{
+        padding: 50px 0px 0px 70px;
+        height: 420px;
+    }
+
+    .contact-info{
+        top: 20px;
+        text-align: center;
+        margin-right: 100px;
+    }
+
+    .contact-button{
+        height: 100px;
+        width: 250px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .navbar li{
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .contact-navbar li{
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .main-heading{
+        font-size: 150px;
+    }
+
+    .main-subtext{
+        font-size: 50px;
+    }
+
+    .main-paragraph{
+        font-size: 28px;
+    }
+
+    .main-button{
+        font-size: 40px;
+        cursor: pointer;
+        height: 100px;
+        width: 310px;
+    }
+
+    img{
+        height: 400px;
+
+    }
+
+    .contact-info{
+        bottom: 400px;    
+    }
+    
+    .contact-heading{
+        font-family: Mynerve;
+        font-size: 50px;
+        margin: 0;  
+    }
+    
+    .contact-subtext{
+        font-family: Montserrat; 
+        font-size: 30px;
+    }
+    
+    .contact-paragragh{
+        font-family: Montserrat; 
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+/* the fucking surface pro */
+@media only screen and (min-width: 912px){
+    img{
+        padding: 60px 0px 0px 130px;
+        height: 450px;
+    }
+
+}
+
+/* fucking surfaces
+@media only screen and (max-width: 540px){
+    img{
+        height: 300px;
+    }
+} */
+
+@media only screen and (min-width: 1024px){
+    img{
+        height: 500px;
+        padding-left: 150px;
+        padding-top: 100px;
+    }
+
+    .contact-info{
+        top: 20px;
+        margin-right: 150px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .contact-info{
+        text-align: center;
+    }
+
+    .contact-subtext{
+        font-size: 22px;
+    }
+
+}

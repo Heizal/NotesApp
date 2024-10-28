@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{%block title%}Sticky{%endblock%}
+
+{%block body%}
+    <div class="contact-navbar">
+        <ul>
+            <li><a href="/">Go to Home</a></li>
+            <li><a href="/newnote">Create New Note</a></li>
+        </ul>
+    </div>
+    <h1 class="notes-heading">My Sticky Notes</h1>
+    <!-- <ul class="notes-list">
+        {% for note in notes_pagination.items%}
+        <li><input type="checkbox">
+            <a href="notes/{{note.slug}}" class="notes-name">{{note.slug}}</a>
+        </li>
+        {%endfor%}
+    </ul> -->
+    {% if notes_pagination.items %}
+      <ul class="notes-list">
+        {% for note in notes_pagination.items %}
+            <li class="note-item">
+                <div class="note-content">
+                    <input type="checkbox">
+                    <a href="/notes/{{ note.slug }}" class="notes-name">{{ note.title }}</a>
+                </div>
+                <div class="note-actions">
+                    <a href="{{ url_for('notes.get_edit_note_form', slug=note.slug) }}" class="edit-button">Edit</a>
+                    <form method="POST" action="{{ url_for('notes.delete_note', slug=note.slug) }}" style="display:inline;">
+                        <input type="submit" value="Delete" class="deletebtn" onclick="return confirm('Are you sure you want to delete this note?');">
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+        <p>No notes found. Start adding your first note!</p>
+    {% endif %}
+    <nav class="nav-btns">
+        {% if notes_pagination.prev_num %}
+          <a href="{{ url_for('notes.notes', page=notes_pagination.prev_num) }}" class="previousbtn">Previous Page</a>
+        {% else %}
+          <span class="previousbtn">Previous Page</span>
+        {% endif %}
+        <span> - </span>
+        {% if notes_pagination.next_num %}
+          <a href="{{ url_for('notes.notes', page=notes_pagination.next_num) }}" class="nextbtn">Next Page</a>
+        {% else %}
+          <span class="nextbtn">Next Page</span>
+        {% endif %}
+      </nav>
+{% endblock %}
+</html>

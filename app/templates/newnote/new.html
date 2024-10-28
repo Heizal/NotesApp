@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{%block title%}Sticky{%endblock%}
+
+{%block body%}
+    <div class="contact-navbar">
+        <ul>
+            <li><a href="/notes">Go back to notes</a></li>
+        </ul>
+    </div>
+    <h1 class="notes-heading">Add a Note!</h1>
+    <form class="newnote_bloc" method="POST" action="/newnote">
+        <div>
+        <label for="task" class="task_heading">Title: </label>
+        <input type="text" name="title" id="title" placeholder="Your task" class="task_input">
+        </div>
+        <div>
+        <label for="category" class="task_heading">Content: </label>
+        <input type="text" name="content" id="content" placeholder="Which category?" class="task_input">
+        </div>
+        <input type="submit" value="Add Note" class="submit_btn">
+    </form>
+{% endblock %}
+</html>

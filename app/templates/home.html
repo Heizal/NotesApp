@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{%block title%}Sticky{%endblock%}
+
+{%block body%}
+    <div class="main-page">
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="/contact">Contact us</a></li>
+            </ul>
+        </div>
+        <!-- Hero content and words -->
+        <div class="hero-text">
+            <h1 class="main-heading">Sticky</h1>
+            <h4 class="main-subtext">Note taking made easier</h4>
+            <p class="main-paragraph">Focus on taking the notes, we'll take care of managing them! </p>
+        </div>
+        <!-- Link to notes page - dynamic page -->
+        <div class="hero-button">
+            <button class="main-button"><a href="/newnote">Write something</a></button>
+        </div>
+    </div>  
+{% endblock %}
+</html>

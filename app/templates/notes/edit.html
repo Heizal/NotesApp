@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{% block title %}Edit Note{% endblock %}
+
+{% block body %}
+    <div class="contact-navbar">
+        <ul>
+            <li><a href="/">Go to Home</a></li>
+            <li><a href="/notes">Back to Notes</a></li>
+        </ul>
+    </div>
+    <h1 class="notes-heading">Edit Note</h1>
+
+    <form method="POST" class="edit-bloc" action="{{ url_for('notes.post_edit_note_form', slug=note.slug) }}">
+        <div class="editTitle">
+            <label for="title" class="task_heading">Title:</label>
+            <input type="text" name="title" id="title" value="{{ note.title }}" class="edit_input" required>
+        </div>
+        <div class="editContent">
+            <label for="content" class="task_heading">Content:</label>
+            <textarea name="content" id="content" class="edit_input_low" required>{{ note.content }}</textarea>
+        </div>
+        <input type="submit" value="Update Note" class="submit_btn">
+    </form>
+{% endblock %}
+</html>
