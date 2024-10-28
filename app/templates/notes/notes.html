@@ -12,13 +12,6 @@
         </ul>
     </div>
     <h1 class="notes-heading">My Sticky Notes</h1>
-    <!-- <ul class="notes-list">
-        {% for note in notes_pagination.items%}
-        <li><input type="checkbox">
-            <a href="notes/{{note.slug}}" class="notes-name">{{note.slug}}</a>
-        </li>
-        {%endfor%}
-    </ul> -->
     {% if notes_pagination.items %}
       <ul class="notes-list">
         {% for note in notes_pagination.items %}

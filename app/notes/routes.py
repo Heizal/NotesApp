@@ -19,6 +19,8 @@ def note(slug):
     #x = note_data[slug]
     return render_template('notes/tasks.html', note=note)
 
+
+#DELETE route to delete note
 @blueprint.post('/notes/delete/<slug>')
 def delete_note(slug):
     note = Note.query.filter_by(slug=slug).first()
