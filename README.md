@@ -2,7 +2,7 @@
 Notes taking made simpler
 
 ### Deploy link
-https://sticky-pyix.onrender.com/
+https://notesapp-i99k.onrender.com
 
 ## About Sticky
 This web app makes note-taking and their general management easier for the user
@@ -29,7 +29,8 @@ How to deploy application
 - Manually deploy latest commit of application to render and visit the link at the top
 
 ***To-do***
-- Add authentication pages to application
+- Add login and logout pages
+- Add user authentication
 
 
 ### Current technologies used
